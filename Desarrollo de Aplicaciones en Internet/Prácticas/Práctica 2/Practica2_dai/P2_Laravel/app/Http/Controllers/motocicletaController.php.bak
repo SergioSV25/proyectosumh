@@ -1,0 +1,25 @@
+<?php
+	namespace App\Http\Controllers;
+	
+	use App\Http\Controllers\Controller;
+	use DB;
+	
+	class motocicletaController extends Controller
+	{
+		public function ver($matricula)
+		{
+			$datos = DB::select("select * from motocicletas where Matricula = ?", [$matricula]);
+			
+			return view('verMotocicletas', ['datos' => $datos]);
+		}
+		
+		public function modificar($referencia, $anyo)
+		{
+			$afectados = DB::update("update motocicletas set Anyo = ? where Matricula = ?", [$anyo, $referencia]);
+			
+			return view('confirmarModificacion', ['afectados' => $afectados]);
+		}
+	}
+	
+	
+?>
