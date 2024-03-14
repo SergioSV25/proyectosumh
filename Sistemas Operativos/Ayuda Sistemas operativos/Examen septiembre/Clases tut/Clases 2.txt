@@ -1,0 +1,66 @@
+////////////////////////////////////////////
+//**   Clase 4, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/*Ahora veremos como pasar argumentos desde la consola a un script
+  Para hacer eso nos fijaremos en el script 'ArgumentsToBash-Script.sh'
+  Que dentro de el se ecuentra esta linea "echo $0 $1 $2 $3 '> echo $1 $2 $3' "
+  Es decir que al escribir en la consola lo siguiente: */
+alu30@so:~/Escritorio$ ArgumentsToBash-Script.sh Mark Tom Jhon 
+Mark Tom Jhon > echo $1 $2 $3
+alu30@so:~/Escritorio$ ArgumentsToBash-Script.sh Mark Tom Jhon 
+./ArgumentsToBash-Script.sh Mark Tom Jhon > echo $1 $2 $3
+/* Obtendremos cmo resultado que que lo que le hemos pasado se guardara en las variables
+ Dato: el $0 sirve para imprimir el nombre del script*/
+
+/*En este caso podemos ver como he puesto 5 nombres, pero solo se imprimen 3 al principio
+eso es porque al principio del codigo solo tengo puesto para que coja 3 argumentos, pero mas abajo 
+tengo  varias lineas de codigo que coge todos los argumentos y los meta en un aray*/
+
+alu30@so:~/Escritorio$ ArgumentsToBash-Script.sh Mark Tom Jhon Ana Daniel
+./ArgumentsToBash-Script.sh Mark Tom Jhon > echo $1 $2 $3
+Mark Tom Jhon Ana Daniel
+Mark Tom Jhon Ana Daniel
+5
+
+////////////////////////////////////////////
+//**   Clase 5, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Mirar el archivo IfElse.sh*/
+
+////////////////////////////////////////////
+//**   Clase 6, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Comandos utilizados: mkdir ("Nombre") crea un directorio con ese nombre
+   cat > ("Nombre del fichero") de esta forma podremos escribir dentro del fichero 
+   si queremos salir de la edición tenemos que darel ctrl + D */
+
+Lo siguiente es simplemente ejecutar el script y seguir los pasos o ver el codigo 
+en el archivo FileTest.sh
+
+////////////////////////////////////////////
+//**   Clase 7, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Mirar el archivo FileTest2.sh*/
+
+////////////////////////////////////////////
+//**   Clase 8, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Mirar el archivo AndOperator.sh*/
+
+////////////////////////////////////////////
+//**   Clase 9, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Mirar el archivo OrOperator.sh*/
+
+////////////////////////////////////////////
+//**   Clase 10, fecha: 17/07/2021       **//
+////////////////////////////////////////////
+
+/* Mirar el archivo ArithmeticOperations.sh*/
+

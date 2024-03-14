@@ -1,0 +1,18 @@
+En estos programas lo que vamos a hacer es usar la fucncion execv
+que lo que hace es cambair el codgio de progrma que se esta ejecutando por otro
+, es decir, se esta ejecutando mi programa 1 y utilizao excv y lo que hago es
+con el mismo proceso cambio ese programa por programa 2.
+
+Eso funciona de la siguiente forma.
+
+nosotros con el main tenemos esto:
+int main(int argc, char const *argv[])
+el argc indica la cantidad de argumentos y argv es el vector de argumentos.
+Como ya sabemos en el argumento 0 se guarda el nombre del programa.
+Pues vamos a usar esto para pasarle a otro programa una cadena de argumentos
+para que haga ciertas cosas, lo primeor que hacemos es declarar el vector de 
+argumentos y darle valores.
+Una vez tengamos eso usamos la funcion execv:
+execv("./prog2", argv2);
+donde le pasamos el programa por el cual queremos que se cambie y el 
+vector de argumentos que le vamos a pasar.

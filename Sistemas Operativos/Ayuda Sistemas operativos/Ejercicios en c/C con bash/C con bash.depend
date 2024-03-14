@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1626168783 source:c:\users\cotes\desktop\archivos\universidad\segundo año\sistemas operativos\ejercicios en c\c con bash\main.c
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<unistd.h>
+	<errno.h>
+	<string.h>
+

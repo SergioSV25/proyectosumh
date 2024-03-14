@@ -1,0 +1,8 @@
+alu30@so:~/Escritorio/Ejerrcicios c/Ejemplo 8$ ls
+ejemplo8.c
+alu30@so:~/Escritorio/Ejerrcicios c/Ejemplo 8$ gcc ejemplo8.c 
+alu30@so:~/Escritorio/Ejerrcicios c/Ejemplo 8$ ls
+a.out  ejemplo8.c
+alu30@so:~/Escritorio/Ejerrcicios c/Ejemplo 8$ a.out
+Descriptor de fichero incorrecto
+

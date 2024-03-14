@@ -1,0 +1,16 @@
+TRas haber relaizado el programa y haber entendidio el funcionamiento explicado
+, ahora procedemos a ver los procesos por consola
+
+Para poder ver los procesos nos vamos a la consola y ponemos ps lf
+ahi poodremos ver dos columnas, una que es PID (que son los pids)
+y otra que es ppid que son los padres de los procesos, si nos 
+fijamos veremos que el ppid del proceso hijo es el pid del padre.
+
+Si en la consola matamos al proceso padre el hijo se seguira ejecutando pero 
+su ppid sera distinto, ese ppid sera su nuevo padre, por si queremos 
+saber cual es su padre ponemos en consola ps lp (y el pid) y nos mostrara 
+que proceso tiene ese pid.
+
+En el caso de que matemos al hijo si nos fijamos en los procesos saldra
+(nombre del proceso ) <defunct> es decir, es un proceso zombie, ya que en la 
+columna stat esta z+

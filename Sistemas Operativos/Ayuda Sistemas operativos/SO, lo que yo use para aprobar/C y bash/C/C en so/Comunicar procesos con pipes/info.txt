@@ -1,0 +1,13 @@
+La idea sera tener un programa donde rceemos dos hijos.
+
+uno de ellos ejecutara ls -l y el otro el wc > file.txt, 
+para que los hijos se comuniquen entre ellos usaremos un pipe. 
+
+Por lo general si hacemos que se ejecute el hijo uno el comando ls -l saldra 
+por el stdout (standrad output) o por terminal, pero nosotros lo que buscamos 
+que salga en el txt, para eso usaremos la funcion dup2(fd, stdout), de esta 
+forma pasaremos por el pipe la info del hijo 1 al hijo 2. 
+
+sera ls -l -> dup2() -> wc dup2() -> file.txt
+
+

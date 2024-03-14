@@ -1,0 +1,57 @@
+Primero y principal leer bien todas las funciones ya que se utilizan luego 
+
+-Recordamos que $# cuenta el numero de argumentos y $* los argumentos 
+    que se han introducido.
+-Cuando habla del rango de los parametros se refiere al rango que teiene del 
+    menor numero al mayor.
+-Recordar que para sacar una linea de un fichero en una variable hay que poner:
+    variable < fichero.txt que es que va del fichero a la varaiable.
+-Importante para la gestion de ficheros el comando cut, si quieres cortar partes
+    del fichero teniendo en cuenta un separador funciona asi: 
+    echo $linea | cut -d';' -f 3
+    esto es cortar de esa linea cada vez que encuentre un ; y eso 
+    cada linea en la posicion 3, es decir, cuando encuentre el tercer ;
+    sera lo siguiente lo que coja.
+
+-Para leer un archivo caracter a caracter:
+
+        fichero="jobsfile.txt"
+		while read -n1 c; 
+		do
+			orden=`ord $c`
+			let index=$orden-65
+
+			(( letras[$index]++ ))
+		done < $fichero
+
+-Para leer un archivo linea a linea:
+
+        fichero="jobscount.txt"
+		index=0;
+		while read cuenta; 
+		do
+			jobs[$index]=$cuenta
+			let index=$index+1
+		done < $fichero
+
+-Para redireccionar los errores: 2>dev/null
+
+- Inicializar un vector a 0:
+    for (( i=0; i<$MAX_HIJOS; i++ ))
+	do
+		letras[$i]=0
+		jobs[$i]=0
+	done
+- Lectura de archivos: 
+    for i in `seq 0 $((numHijos-1))`; 
+	do
+		#Obtenemos el nombre del fichero para el hijo $i
+		fichero=`GetFileName $i`
+
+		#Leemos el número de piezas del fichero. Primera linea del mismo.
+		read nPiezas < $fichero
+
+		#Asignamos el numero de piezas al elemento $i del array piezasHijos
+		piezasHijos[$i]=`ToNumber $nPiezas`
+	done //Mas info examen septiembre 2020
+

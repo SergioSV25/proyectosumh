@@ -1,0 +1,45 @@
+
+////// LEER FICHEROS Y USASR EL FORK, PADRES E HIJOS /////////////
+
+1.[1]Ver video Leer fichero C, leer borrar los ficheros de resultados
+  ver videos [10]fork() parte 1 y [11]fork()parte 2, [12]argumentos en linea de comandos
+  leer Procesos Zombies y Huérfanos  creacion del array de estructuras hijo y ordenar un array
+
+
+////// SEMAFOROS  /////////////
+
+2. ver videos [5]Semaforos POSIX,
+   leer Implementación de semáforos POSIX en C y librería de servicio, Destruir un semáforo, Sincronización Padre-Hijos con Semáforos
+
+
+
+////// MANEJO DE SEÑALES Y PROCESOS(AVANZADOS)/////////////
+
+3. Ver videos [6]señales signals, [7] señales en linux 2, [13]execv
+   (REPASAR)Llamadas al sistema para gestión de Procesos, Llamadas al sistema para gestión de Señales, Comunicacion padres-Hijos con señales
+
+
+////// MAKEFILE Y APRENDER USO DE MEMEORIA /////////////
+
+4.Ver videos [17]makefile, [14] memoria compartida, [8]asignacion de memoria dinamica, [15]Mapeo de memeoria, 
+  Ler Makefiles y memoria compartida, Sincronización Padre-Hijos con semáforos y memoria compartida
+
+////// USAR PIPES Y COMUNICAR PROCESOS CON PIPES /////////////
+ 
+5. [4]Programar c con fifos [18 ]comunicar dos porcesos con pipes
+   LEER PIPES
+
+////// LEER INFORMACION ADICIONAL A LOS VIDEOS /////////////
+
+6.Leer todo esto, pero no hay video:
+
+ 
+ Programación C: errores, parámetros, funciones y entorno
+ Uso de “Real time Signals”
+  
+
+////// preguntar al profesor /////////////
+pendientes por ver: [2]inotify
+
+no sabesmos si entra: [3]Hilos pthreads, [9]Colas de menasjes, [20] Programar colas de mensajes, [16]sinconizacion de hilos, [19] deteccion de memoria
+  

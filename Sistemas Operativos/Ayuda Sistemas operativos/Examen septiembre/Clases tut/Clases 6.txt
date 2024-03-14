@@ -1,0 +1,94 @@
+
+/////////////////////////////////////////////
+//**   Clase 25, fecha: 23/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo FunctionExampleTuto.sh y FunctionExampleYo.sh*/
+
+
+/////////////////////////////////////////////
+//**   Clase 26, fecha: 23/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo Readonly.sh*/
+
+
+/////////////////////////////////////////////
+//**   Clase 27, fecha: 23/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo SignalsyTraps.sh*/
+
+En este caso tenemos varios comandos que sirven para matar y parar procesos, el primero seria:
+1.- ctrl+d: 
+alu30@so:~/Escritorio$ SignalsyTraps.sh 
+pid is 25327
+1
+2
+^C
+y aqui acaba el proceso
+
+2.- ctrl+z:
+alu30@so:~/Escritorio$ SignalsyTraps.sh 
+pid is 25346
+1
+2
+^Z
+[1]+  Detenido                SignalsyTraps.sh
+y aqui acaba el proceso
+//
+Con esta forma ed matar el proceso necesitamos otra consola de comandos y escribir el siguiente comando:
+alu30@so:~$ kill -9 25465
+donde 25367 es el pid que se le ha asigando.
+Entonces ponemos el pid asignado y lo matamos y quedaria tal que asi:
+alu30@so:~/Escritorio$ SignalsyTraps.sh 
+pid is 25465
+1
+2
+Terminado (killed)
+
+/////////////////////////////////////////////
+//**   Clase 28, fecha: 23/07/2021       **//
+/////////////////////////////////////////////
+
+Para poder debuegar el codigo se puede poner en la consola de comandos bash -x ./Nombre del archivo
+y se ejecutara en modo debug asi:
+alu30@so:~/Escritorio$ bash -x ./SignalsyTraps.sh
++ file=/home/alu30/Escritorio/file.txt
++ trap 'rm -f /home/alu30/Escritorio/file.txt && echo file deleted; exit' 0 2 15
++ echo 'pid is 26007'
+pid is 26007
++ ((  COUNT < 10  ))
++ sleep 10
++ ((  COUNT ++  ))
++ echo 1
+1
++ ((  COUNT < 10  ))
++ sleep 10
++ ((  COUNT ++  ))
++ echo 2
+2
++ ((  COUNT < 10  ))
++ sleep 10
++ ((  COUNT ++  ))
++ echo 3
+3
+
+o en su defecto si queremos ponerlo dentro del codigo solo hara falat poner esto: #!/bin/bash -x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

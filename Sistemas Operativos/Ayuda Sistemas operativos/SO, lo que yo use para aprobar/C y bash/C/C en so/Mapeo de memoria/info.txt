@@ -1,0 +1,18 @@
+Vamos a realizar un programa que lo que va a hacer es mapear en la memoria 
+virtual del proceso un archivo de texto y sobre el mismo se haran unas 
+modificaciones.
+
+En el programa vamos a utilizar la funcion stat, que la vamos a declarar como 
+una estructura, ya que de esta forma tenemos acceso a un monton de opciones, 
+ya que la fucnoin stat nos da mucha informacion acerca de ficheros en el buffer,
+por lo tanto es idonea para ese rpgrama, todo esto se puede ver aqui:
+        https://man7.org/linux/man-pages/man2/lstat.2.html
+
+
+para que el rpograma funcione tiene que haber un archivo txt con texto
+
+luego ponemos: replaceChar MyFile.txt E r
+
+primero el programa, luego el fichero, luego la letra que queremos sustituir y
+pot ultimo la la letra por la cual vamos a cambiarla
+

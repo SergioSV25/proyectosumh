@@ -1,0 +1,53 @@
+
+/////////////////////////////////////////////
+//**   Clase 20, fecha: 21/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo ForExecute.sh*/
+
+/////////////////////////////////////////////
+//**   Clase 21, fecha: 21/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo SelectLoop.sh*/
+
+/////////////////////////////////////////////
+//**   Clase 22, fecha: 21/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo BrakContinue.sh*/
+
+/////////////////////////////////////////////
+//**   Clase 23, fecha: 21/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo Fucntions.sh*/
+
+/////////////////////////////////////////////
+//**   Clase 24, fecha: 21/07/2021       **//
+/////////////////////////////////////////////
+
+/*Mirar archivo LocalVariables.sh*/
+
+En este codigo aprenderemos a ver como son las variables locales, el codigo hace que cuando se llama a la fuancion print y se le pase un nombre
+la fucnion guardara ese nombre en la variable name, que pasa que cuando se inicializa la variable con el nombre tom, se imprime el nombre, pero 
+cuando llamamos a la funcion imprmir y le pasmos el nombre max se sobreescribe, es decir queda algo tal que asi:
+alu30@so:~/Escritorio$ LocalVariables.sh 
+The name is Tom
+The name is max
+The name is max
+Es decir al llamar a la funcion imprmir se sobreescribe la variable name.
+Pero si ponemos esto en la funcion: local name=$1
+significa que el nombre de la variable siempre sera el ya inicializado, es decir, name = tom,
+pero cada vez que llamemos a la funcion imprmir se cambiara por max y luego volvera a su estado original.
+Haciendo que se mantenga la variable tom y max solo cuando se llama a la funcion dea ahi el nombre variable local
+
+
+
+
+
+
+
+
+
+

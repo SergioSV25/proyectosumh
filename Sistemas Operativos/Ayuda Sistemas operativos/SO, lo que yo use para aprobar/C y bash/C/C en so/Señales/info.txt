@@ -1,0 +1,29 @@
+SI en el pterminal ponemos kill -l nos sale el listado de que podemos 
+hacer con el kill.
+    9) SIGKILL para matar a un proceso
+    19) SIGSTOP para detener una señal
+    18) SIGCONT para continuar con una señal parada
+
+(ESTO YA LO VIMOS PERO ES UN REPASO)
+Una vez se este ejecutando el proceso, si queremos detenerlo ponemos
+kill -SIGSTOP (PID) o kill -19 (PID)
+(PD: si no sabemos como sacar el PID hacemos lo siguiente:)
+(Ponemos en consola ps u y nos saldran los procesos, buscamos es nombre)
+(y en la columna de PID podremos verlo)
+si queremos continuar con el proceso ponemos 
+kill -SIGSTOP (PID) o kill -18 (PID)
+y si queremos matarlo 
+kill -SIGKILL (PID) o kill -9 (PID)
+
+En el programa SignalHnadler hemos puesto un trap, que es que cada vez que
+reciba una señal ejecutara el siguiente argumento que le hemos pasado.
+////////////////////////////////////////////////////////////////////////////////
+
+Si nos metemos en esta pagina: 
+https://man7.org/linux/man-pages/man7/signal.7.html
+y hacemos scroll veremos una tabla donde sale las señales y en una columna pone
+action, nos tenemos que fijar en esa columna para saber que va a hacer la señal,
+mas abajo nos explica que hace cada señal.
+si le pasamos una señal que tiene como accion TERM por ejemplo:
+kill -SIGALRM (PID)
+si no tiene un signal handler el programa terminara.

@@ -1,0 +1,11 @@
+
+Tutorial bash:
+https://www.youtube.com/watch?v=cQepf9fY6cE&list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_&index=1
+
+Tutorial de c en linux:
+https://www.youtube.com/watch?v=MtqFZRXaeM0&list=PLn9-gi1mj5U7K_Ke9N3uqOFdzNnHUpHhl
+
+Las carpetas importantes son 
+
+SO, lo que use para.../C y Bash/Bash/*Las dos carpetras*
+SO, lo que use para.../C y Bash/ C en so/*Todas las carpetas*

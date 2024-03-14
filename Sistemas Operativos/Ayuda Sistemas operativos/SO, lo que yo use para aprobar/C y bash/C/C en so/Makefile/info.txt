@@ -1,0 +1,69 @@
+Lo primero de todo es que para generar un make file hay que poner esto:
+
+myprog : main.o diag.o com.o init.o 
+    gcc main.o diag.o com.o init.o -o myprog
+
+que es el nombre del ejecutable que vamos a crear y los archivos que tiene 
+que compilar, pondremos simpre .o ya que si ponemos que complie los .c 
+si son programas de muchas lineas tardara mucho y no es eficiente, por eso
+solo compliamos el objeto y no el programa entero.
+
+Una vez tengamos eso hay que poner las dependencias de cada programa:
+
+main.o : main.c	init.h diag.h com.h
+	#gcc -c main.c
+
+diag.o : diag.c	init.h diag.h com.h
+	#gcc -c diag.c
+
+init.o : init.c	init.h
+	#gcc -c init.c
+
+com.o : com.c init.h com.h
+	#gcc -c com.c
+
+Que seria poner el archivo .c que es y los includes .h que lleva
+el gcc se puede poner, pero no hace falta ya que el makefile ya sabe lo que
+tiene que hacer.
+
+Luego usamos estos dos comandos:
+
+.PHONY : clean 
+clean:
+	rm -f *.o myprog
+
+el PHONY esta basicamente para que el programa no se confunda y sepa que es un 
+comando y no un archivo
+y luego el clean sirve para cuando esvribamos en consola "make clean"
+se ejecute la linea de rm que sirve para borrar todos los fichero .o y el 
+ejecutable. 
+
+A continuacion usaremos variables como por ejemplo: TARGET = myprog
+y luego en el codigo todo lo que tenga myprog se cambiara por: $(TARGET)
+
+Ahora vamos a usar una cosa llamada pattern, podemos ver mas en detalle aqui:
+    https://www.gnu.org/software/make/manual/html_node/Pattern-Examples.html
+Lo que vamos a hacer es quitar todo esto:
+main.o : main.c	init.h diag.h com.h
+diag.o : diag.c	init.h diag.h com.h
+init.o : init.c	init.h
+com.o : com.c init.h com.h
+y cambiarlo por esto: 
+
+%.o : %.c
+        $(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+esto basicamente lo que hace es lo mismo que lo otro, ya que lo pone arriba
+primero compilamos en .c y luego en .o y con el $< -o $@ leemos las entradas.
+
+
+
+
+
+
+
+
+
+
+
+
+

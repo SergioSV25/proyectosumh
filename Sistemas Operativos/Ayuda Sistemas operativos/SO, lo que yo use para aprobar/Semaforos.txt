@@ -1,0 +1,25 @@
+-Para crear semaforos primero deberemos tener una variable int que por lo 
+    general la llamaremos sMutex.
+
+-Luego para hacer que esa variable sea un semaforo tenemos que poner esto:
+    sMutex=sCreate(SSEED,1); //El uno es para saber que valor tiene de inicio 
+    el semaforo.
+
+-Hay una cosa que se suele usar mucho en semaforos que esperar la terminacion 
+    de los hujos y se usa la funcion waitpid:
+    for(i=0; i < numHijos; i++){
+			pid=waitpid(hijos[i].pid ,&status,0); 
+		}
+    De esta forma esperamos la terminacion de cualquier hijo y recogemos su PID
+    Tambien hay otra forma de coger la terminacion de los hijos y es:
+    for(i=0; i < numHijos; i++){
+			waitpid(-1,&status,0); 
+		}
+    De esta froma esperamos a cualquie hijo sin necesidad de recoger el pid.
+
+-Destruir semaforo:
+    sDestroy(shmMutex);
+
+    
+//Suponemos que swait y sSignal esta creado,
+    para poder hacer sWait(sMutex)

@@ -1,0 +1,11 @@
+para poder crear el archivo y que funcione hay que poner lrt al final
+gcc sm_create.c -o sm_create -lrt
+Para ver si se ha realizado bien, escribimos en consola cd para ir a la raiz
+y luego cd /dev/shm y luego ls -l y veremos nuestro programa ahi.
+
+Una vez realizado el programa sm_write, lo ejecutamos y en el directorio
+escribimos cat myMemoryOBJ Y VERIAMOS ESTo:
+
+alu30@so:/dev/shm$ cat myMemoryObj 
+Hola soy el proceso que escribe 
+

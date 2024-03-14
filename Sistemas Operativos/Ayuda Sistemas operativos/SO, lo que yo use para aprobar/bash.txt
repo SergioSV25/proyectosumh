@@ -1,0 +1,155 @@
+#!/bin/bash
+#-----------------------------
+# Definición de Constantes
+#-----------------------------
+## En esta sección definiremos constantes que vamos a usar en el código, como por ejemplo
+## el número máximo de jugadores, o el número máximo de sorteos, así como cualquier código de
+## error que vayamos a utilizar.
+#Consantes
+MAX_SORTEOS=15
+MAX_JUGADORES=10
+#Errores
+ERR_NUM_ARGS=-1 
+ERR_NUM_SORTEOS=-2
+ERR_NUM_JUGADORES=-3
+#Códigos de retorno
+RET_OK=0
+#-------------------------------
+# Funciones
+#-------------------------------
+## En esta sección definiremos todas las funciones que vamos a utilizar en la sección prinpipal
+## Definir las necesarias. Algunas funciones que podéis definir serían las siguientes.
+Sintaxis(){
+#-----------------------------------
+#Esta función se encarga de mostrar la ayuda de cómo utilizar el script y termina su ejecución
+#Recibe como parametro el código de terminación
+exit $1
+}
+Inicializar(){
+#-----------------------------------
+#Esta función se encarga de inicializar el array de premios
+#Recibe como parámetro el número de jugadores que entran en los sorteos que se ejecutan
+clear
+for jugador in `seq 1 $1`; do
+ premios[$jugador]=0
+done
+}
+ControlArgumentos(){
+#-----------------------------------
+# Esta función se encarga de controlar que los argumentos están en el rango permitido
+# Recibe el conjunto de argumentos que se han pasado al script
+# Devuelve un código de error indicando el tipo de error que se ha producido
+# Si piden ayuda con -? llama a Sintaxis con el código de retorno 0
+if [ $1 == ? ]; then
+ Sintaxis $RET_OK
+fi
+
+
+if [ $# -lt 1 || $# -gt 2 ]; then
+	return ERR_NUM_ARGS
+fi
+
+if [ $1 -lt 1 || $1 -gt 15 ]; then
+	return ERR_NUM_SORTEOS
+fi
+
+if [ $2 -lt 1 || $$2 -gt 10 ]; then
+	return ERR_NUM_JUGADORES
+fi
+
+
+
+
+}
+LimpiarFicheros(){
+#-----------------------------------
+# Esta función elimina los ficheros de ejecuciones anteriores
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+#Borrar
+find $DIR -name "S*R" -delete
+}
+
+LeerFicherosPremios(){
+j=0;
+
+for((j=1 ; j<=$1 ; j++)); do
+	i=0;
+	nombre=S${j}R
+	while read -r linea
+	do
+  		if ! [[ $linea =~ ^#.* ]]; then
+
+  			((premios[i]=premios[i]+linea))
+  			#statements
+  		fi
+  		((i++))
+	done < $nombre
+	
+done
+#-----------------------------------
+# Esta función se encarga de leer uno a uno los ficheros de premios
+# Recibe como parámetros el numero de sorteos y el de jugadores en cada sorteo
+# Rellenará el array de premios, sumando a cada jugador su importe correspondiente al numero de sorteo
+}
+MostrarResultados(){
+	i=0
+	j=0
+	total=0
+	echo "Informe de resultados"
+	echo "Se han realizado $1 sorteos de $2 jugadores"
+	for(( i=0 ; i<$2 ; i++ )){
+		((j=i+1))
+		((total=premios[i]))
+			echo "Jugador $j: Total premio $total en Euros"
+	}	
+	
+#-----------------------------------
+# Esta función se encarga de mostrar los resultados en el informe final.
+}
+#-------------------------------
+# PRINCIPAL - CODIGO
+#-------------------------------
+## Esta es la sección principal donde comienza la ejecución del código del script, aqui haremos uso 
+## de las funciones, constantes y errores definidos en las secciones anteriores.
+#Llamamos al controld e argumentos pasándole los argumentos recibidos
+ControlArgumentos $*
+retVal=$?
+if [ $retVal -eq $ERR_NUM_ARGS ]; then
+   #Mostramos mensaje y llamamos a Sintaxis
+   echo "Numero de argumentos incorrecto"
+   Sintaxis $RET_OK
+fi
+if [ $retVal -eq $ERR_NUM_SORTEOS ]; then
+   #Mostramos mensaje y llamamos a Sintaxis
+   echo "Numero de sorteos incorrecto"
+   Sintaxis $RET_OK
+fi
+if [ $retVal -eq $ERR_NUM_JUGADORES ]; then
+   #Mostramos mensaje y llamamos a Sintaxis
+   echo "Numero de jugadores incorrecto"
+   Sintaxis $RET_OK
+fi
+#Si superamos el control de argumentos asignamos los argumentos a las variables
+numSorteos=$1
+numJugadores=$2
+#Inicializamos el array de premios
+Inicializar $numJugadores
+#Limpiamos de ejecuciones anteriores
+LimpiarFicheros
+
+i=0
+for(( i=1; i<=numSorteos;i++)){
+	./main $numJugadores $i
+}
+#Ejecutamos los sorteos en un bucle para el número de sorteos que nos pasan.
+
+
+#En cada sorteo pasamos como parámetro el número de sorteo y el número de jugadores
+#sorteo es el ejecutable en C que realiza el sorteo
+#Una vez realizados los sorteos leemos los premios
+LeerFicherosPremios $numSorteos $numJugadores
+
+#Y finalmente mostramos los resultados
+MostrarResultados $numSorteos $numJugadores
+exit 0

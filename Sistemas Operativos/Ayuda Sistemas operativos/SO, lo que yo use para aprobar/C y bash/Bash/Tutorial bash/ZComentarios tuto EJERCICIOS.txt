@@ -1,0 +1,61 @@
+1.-Ejercicio AndOperator.sh:
+    En este ejercicio podemos ver varias formas de hacer un if con un and y 
+    como imprmir un texto y en la misma linea que este la barra para escribir.
+2.-Ejercicio ArgumentsToBash-Script.sh:
+    Como guardar todo el input de consola en un array, imprimirlo y mostrar
+    todos los argumentos que le hemos pasado.
+3.-Ejercicio ArithmeticOperators.sh:
+    Este ejercicio trata sobre sumar, restar, multiplicar usando expr
+4.-Ejercicio ArrayVariables.sh:
+    Como manejar mejor los arrays
+5.-Ejercicio BreakContinue.sh:
+    Usar la funcion continue en un for.
+6.-Ejercicio caseStatement.sh:
+    Introducir una variable y dependiendo de que variable sea
+    se redirige a un case o al otro.
+7.-Ejercicio caseStatement2.sh:
+    Lo mismo pero en este caso tenemos rangos. Ej [a-z], [A-Z]...
+8.-Ejercicio FileTest.sh:
+    Comprobar si el archivo, fichero o directorio existe.
+9.-Ejercicio FileTest2.sh:
+    Comprueba si el fichero existe, y si existe comprueba si tiene 
+    permisos de escritura.
+10.-Ejercicio FloatOPerations.sh
+    pasa una operacion a bc que es una funcion calculadora y se le pasa
+    usando un pipe ( | ).
+11.-Ejercicio ForExecute.sh
+    Bucle for de una forma distinta. (for item in *)
+12.-Ejercicio ForLoop.sh
+    Distintas formas de hacer un for.
+13.-Ejercicio FunctionExampleTuto.sh / FunctionExampleYo.sh
+    Como usar funciones en bash.
+14.-Ejercicio Functions.sh
+    Una funcion basica en bash.
+15.-Ejercicio hello.sh
+    Un hello world basico.
+16.-Ejercicio ifElse.sh
+    Varias formas de hacer un ifelse
+17.-Ejercicio LeerInputUsuario.sh
+    Formas de lectura de inputs.
+18.-Ejercicio LocalVariables.sh
+    Explicacion de como funcionan las local variables.
+19.-Ejercicio OrOperator.sh
+    Distintas formas de escribir un or
+20.-Ejercicio ReadFile.sh
+    Como leer un fichero linea a linea.(IFS= read)
+21.-Ejercicio Readonly.sh
+    Ver el uso de la variable readonly que significa que sera solo de lectura.
+22.-Ejercicio SelectLoop.sh
+    Es una forma de hacer un breve menu con las opciones que le indiques
+    luego eliges esta opcion y te sale x opcion selected.
+23.-Ejercicio SignalsyTraps.sh
+    Vemos el uso de traps y de que al usar kill en la consola si se envia cierta
+    señal lo recibira y saltara x mensaje.
+24.-Ejercicio UntilLoop.sh
+    Como implementar un unitl loop.
+25.-Ejercicio whileLoops.sh y whileLoops2.sh
+    Distintas formas de usar un while.
+
+
+
+

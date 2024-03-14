@@ -1,0 +1,7 @@
+Si un proceso con E/S acaba a la vez que un proceso normal, el proceso de E/S se pone en la cola antes que el proceso normal
+
+-Tiempo de respuesta: tiempo que tarda en entrar a ejecutarse por primera vez
+-Tiempo de espera: Tiempo total que esta esperando en total
+-Tiempo de retorno: Tiempo total que tarda en acabar, es decir si empieza en el proceso 4 y acaba en el 24: (24-4= 20) acaba en el 20.
+-Tasa de cpu es cpu/retorno.
+  

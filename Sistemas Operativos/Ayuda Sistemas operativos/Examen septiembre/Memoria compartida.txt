@@ -1,0 +1,21 @@
+Para la memoria compartida:
+
+-Definimos el tamaño del segmento de la memoria compartida:
+ej
+shmSize =(valor que desees o se indique) * siezof(int);
+
+-Creamos el segmento de memoria compartida
+ej
+Con shmget vamos a obtener un identificador con el que podamos realizar futuras 
+llamadas al sistema para controlar una zona de memoria compartida. Su declaración es:
+
+shmId = shmget(ftok(".", SHMSEED), shmSize, IPC_CREAT | SHMPERMISOS);
+//Luego le asignamos el segmento compartido//
+shmArray = shmat(shmIdd,0,0);
+
+-Para desvincularnos del array donde esta signado el segmento compartido:
+ shmdt(shmArray);
+
+-Para destruir el array de memoria compartida:
+shmctl(shmId,IPC_RMID,0);
+

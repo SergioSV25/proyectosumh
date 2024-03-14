@@ -1,0 +1,10 @@
+Esto es una guia para explicar lo que hay en el programa:
+Dentro del programa lo que hacemos es pasarle a lafuncion open un archvio
+para que lo abra, luego se lee con read y luego se cierra con close
+
+"NOta adicional: si cambiamos en el read la direccion del archivo y ponemos $1
+y luego en consola le indicamos la ruta funciona todo bien"
+
+para informacion de borrado de ficheros:
+
+    https://so.momrach.es/borrar-los-ficheros-de-resultados/

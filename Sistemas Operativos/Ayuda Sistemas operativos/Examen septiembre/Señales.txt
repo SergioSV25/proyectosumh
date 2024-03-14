@@ -1,0 +1,32 @@
+-sigqueue(pid_t pid, int sig, const union sigval value); sigqueue - envía una señal y un bloque de datos a un proceso.
+	Envía la señal especificada en sig al proceso cuyo identificador de proceso es dado en pid.
+	El argumento value se utiliza para especificar un bloque de datos acompañante (o  bien  un entero o un puntero) 
+	que se enviará con la señal.
+	Si  el  proceso  receptor  tiene  un  manejador instalado para esta señal usando la opción
+        SA_SIGINFO en la llamada a sigaction(2), puede  obtener  los  datos  a  través  del  campo
+        si_value  de  la estructura siginfo_t pasada como segundo argumento al manejador.  Además,
+        se asignará al campo si_code de esta estructura el valor SI_QUEUE.
+ 	En  caso  de  éxito,  sigqueue()  devuelve  0,  indicando  que  la  señal   fue   ennviada
+        satisfactoriamente  al  proceso receptor.  En otro caso se devuelve -1 y errno se modifica
+        para indicar el error.
+
+-SIGRTMIN Son las señales a tiempo real minimas, por lo general si nos piden esto nos especificaran que pongamos esta en 
+	  concreto.
+
+-int kill(pid_t pid, int sig); The kill() system call can be used to send any signal to any process group or process
+	Le envia una señal al pid indicado y la señal es el otro parametro que se le pasa.
+	Nos devolvera 0 si la señal has dio recibida correctamente y -1 si no hga sido asi 
+
+int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);
+	La  llamada  al  sistema  sigaction  se emplea para cambiar la acción tomada por un proceso
+	cuando recibe una determinada señal.
+	Esta función espera tres parámetros:
+
+	El primero es la señal,
+	El segundo es un puntero a una estructura donde se define la nueva función a la que se debe 
+	transferir el control al recibir la señal
+	El tercero es un puntero a una estructura con el antiguo manejador establecido.
+
+
+http://manpages.ubuntu.com man pero en español
+	

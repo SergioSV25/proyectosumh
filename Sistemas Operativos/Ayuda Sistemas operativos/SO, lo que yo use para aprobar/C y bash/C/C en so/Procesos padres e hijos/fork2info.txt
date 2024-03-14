@@ -1,0 +1,7 @@
+En este caso lo que hacemos es crear cinco hijos, una vez hecho eso realizan
+una funcion que hace que generen un numero aleatorio y lo guarde en una varibale
+una vez hecho eso el hijo sale, despues de haberlo realizado vamos a un for 
+que espera a que el hijo termine, una vez hecho eso el padre recibe el pid 
+del hijo que acaba de terminar y para saber que hijo es, imprimimos su pid 
+y el status aleatorio que generamos anteriormente, cuando el padre reciba la 
+señal de los 5 hijos se dormira por siempre.
