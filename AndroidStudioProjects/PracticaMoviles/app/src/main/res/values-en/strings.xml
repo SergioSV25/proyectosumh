@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PracticaMoviles</string>
+    <string name="button">Log in</string>
+    <string name="buttonCrearCuenta">Sign up</string>
+    <string name="practica_1_m_viles">Práctica 1 Móviles</string>
+    <string name="iniciar_sesion">Log in</string>
+    <string name="crear_cuenta">Sign up</string>
+    <string name="notienescuenta">You do not have an account?</string>
+    <string name="password">Password</string>
+    <string name="email">Mail</string>
+    <string name="Guardar">Save</string>
+    <string name="Nombre">Name</string>
+    <string name="fecha_de_nacimiento">Birthdate</string>
+    <string name="apellidos">Surnames</string>
+    <string name="seleccion_pregunta_seguridad">Select your security question</string>
+
+    <!-- Listado de preguntas de seguridad -->
+    <string-array name="security_questions_array">
+        <item>Name of your first pet?</item>
+        <item>What is your favorite food?</item>
+        <item>What city were you born?</item>
+    </string-array>
+
+    <string name="respuesta_seguridad">Your answer</string>
+    <string name="intereses">Interestes:</string>
+    <string name="tecnologia">Tecnology</string>
+    <string name="deportes">Sports</string>
+    <string name="redes_sociales">Social Media</string>
+    <string name="cine">Cinema</string>
+    <string name="otros">Others</string>
+    <string name="factor_autentificacion2">Second authentication factor</string>
+    <string name="tu_respuesta">Your answer</string>
+    <string name="plataformas">Media</string>
+    <string name="pel_culas">Films</string>
+    <string name="no_hay_id">No ID</string>
+    <string name="id_del_usuario">User ID:</string>
+    <string name="hacer_foto">Take photo</string>
+    <string name="subir_foto">Upload photo</string>
+    <string name="nombre_plataforma">Media name</string>
+    <string name="url">URL</string>
+    <string name="usuario_correo">User (mail)</string>
+    <string name="contase_a">Password:</string>
+    <string name="guardar_plataforma">Save media</string>
+    <string name="cancelar">Cancel</string>
+    <string name="nueva_plataforma">New media</string>
+    <string name="atr_s">Back</string>
+    <string name="editar">Edit</string>
+    <string name="volver">Back</string>
+    <string name="nueva_pelicula">New film</string>
+    <string name="galeria">Upload photo</string>
+    <string name="titulo">Title</string>
+    <string name="duracion_minutos">Duration Minutes</string>
+    <string name="puntuacion">Rate:</string>
+    <string name="genero">Genre</string>
+    <string name="puntuaci_n">Rate:</string>
+    <string name="g_nero">Genre:</string>
+    <string name="duraci_n">Duration:</string>
+</resources>

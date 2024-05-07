@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">PracticaMoviles</string>
+    <string name="button">Iniciar Sesion</string>
+    <string name="buttonCrearCuenta">Crear Cuenta</string>
+    <string name="practica_1_m_viles">Práctica 1 Móviles</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="notienescuenta">¿No tienes cuenta?</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Nombre">Nombre</string>
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="seleccion_pregunta_seguridad">Selecciona tu pregunta de seguridad</string>
+
+    <!-- Listado de preguntas de seguridad -->
+    <string-array name="security_questions_array">
+        <item>¿Nombre de tu primer mascota?</item>
+        <item>¿Cuál es tu comida favorita?</item>
+        <item>¿En qué ciudad naciste?</item>
+    </string-array>
+
+    <string name="respuesta_seguridad">Tu respuesta</string>
+    <string name="intereses">Intereses:</string>
+    <string name="tecnologia">Tecnología</string>
+    <string name="deportes">Deportes</string>
+    <string name="redes_sociales">Redes Sociales</string>
+    <string name="cine">Cine</string>
+    <string name="otros">Otros</string>
+    <string name="factor_autentificacion2">Segundo factor de autentificación</string>
+    <string name="tu_respuesta">Tu respuesta</string>
+    <string name="plataformas">Plataformas</string>
+    <string name="pel_culas">Películas</string>
+    <string name="no_hay_id">No hay ID</string>
+    <string name="id_del_usuario">Id del usuario:</string>
+    <string name="hacer_foto">Hacer foto</string>
+    <string name="subir_foto">Subir foto</string>
+    <string name="nombre_plataforma">Nombre plataforma</string>
+    <string name="url">URL</string>
+    <string name="usuario_correo">Usuario (correo)</string>
+    <string name="contase_a">Contaseña:</string>
+    <string name="guardar_plataforma">Guardar plataforma</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="nueva_plataforma">Nueva plataforma</string>
+    <string name="atr_s">Atrás</string>
+    <string name="editar">Editar</string>
+    <string name="volver">Volver</string>
+    <string name="nueva_pelicula">Nueva pelicula</string>
+    <string name="galeria">Galeria</string>
+    <string name="titulo">Titulo</string>
+    <string name="duracion_minutos">Duracion Minutos</string>
+    <string name="puntuacion">Puntuacion</string>
+    <string name="genero">Genero</string>
+    <string name="puntuaci_n">Puntuación:</string>
+    <string name="g_nero">Género:</string>
+    <string name="duraci_n">Duración:</string>
+</resources>
